@@ -406,3 +406,58 @@ footer p {
     break-inside: avoid;
   }
 }
+/* Compact and uncropped life gallery */
+
+.publication-entry + .publication-entry {
+  margin-top: 28px;
+}
+
+.photo-gallery {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.photo-gallery figure,
+.gallery-wide,
+.gallery-panorama {
+  grid-column: auto;
+  min-width: 0;
+}
+
+.photo-gallery a {
+  overflow: visible;
+  background: transparent;
+}
+
+.photo-gallery img,
+.gallery-wide img,
+.gallery-panorama img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: none;
+}
+
+.photo-gallery a:hover img {
+  transform: none;
+}
+
+@media (max-width: 700px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .photo-gallery img,
+  .gallery-wide img,
+  .gallery-panorama img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+}
