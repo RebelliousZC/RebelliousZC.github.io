@@ -54,13 +54,14 @@ Google Scholar 建好后，在 `profile-links` 内加入：
 <a href="Tianyou_Wu_CV.pdf">CV</a>
 ```
 
-### 启用 News
+### 更新 News
 
-`index.html` 的 Education 和 Publications 之间已经保留了 News 模板。删除模板外侧的 `<!--` 与 `-->`，再按照时间倒序增加列表项即可。
+在 `index.html` 中搜索 `<ul class="news-list">`，按照现有格式复制一个
+`<li>...</li>`，修改日期和内容，并保持时间倒序排列。
 
 ### 添加论文
 
-复制完整的 `<article class="publication-entry">...</article>`，替换论文题目、作者、状态和链接。论文正式接收后，再把 `Under review` 修改成正式期刊信息。
+复制完整的 `<article class="publication-entry">...</article>`，替换论文题目、作者、状态和链接。你的姓名使用 `<strong>...</strong>` 加粗；通讯作者姓名后使用 `<sup>*</sup>` 标注。论文正式接收后，再把 `Under review` 修改成正式期刊信息。
 
 ### 添加生活记录
 
@@ -68,6 +69,9 @@ Google Scholar 建好后，在 `profile-links` 内加入：
 2. 复制现有的 `<article class="life-entry">...</article>`。
 3. 修改日期、地点、标题、简介和展开内容。
 4. 修改图片的 `src`、`href` 和 `alt`。
+
+正文和图片都放在 `<details class="life-details">...</details>` 内，因此
+首页默认只显示标题、简介和 `Read more`。
 
 图片文件名建议只使用小写英文字母、数字和连字符，例如 `hangzhou-trip-01.jpg`。
 
