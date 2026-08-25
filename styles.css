@@ -27,6 +27,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[data-lang="en"] .lang-zh,
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+
+html[data-lang="zh"] body {
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -45,7 +55,8 @@ a:hover {
 }
 
 a:focus-visible,
-summary:focus-visible {
+summary:focus-visible,
+button:focus-visible {
   outline: 3px solid rgba(79, 135, 148, 0.32);
   outline-offset: 4px;
   border-radius: 2px;
@@ -55,6 +66,36 @@ summary:focus-visible {
   width: min(900px, calc(100% - 48px));
   margin: 0 auto;
   padding: 68px 0 38px;
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.42rem;
+  margin-bottom: 30px;
+  color: #a0a8aa;
+  font-size: 0.86rem;
+}
+
+.language-button {
+  padding: 3px 1px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-button:hover,
+.language-button.is-active {
+  border-bottom-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.language-button.is-active {
+  font-weight: 700;
 }
 
 h1,
@@ -220,8 +261,6 @@ section {
   font-weight: 700;
 }
 
-
-
 .life-entry {
   padding-top: 24px;
   border-top: 1px solid var(--line);
@@ -377,6 +416,10 @@ footer p {
   .site-shell {
     width: min(100% - 34px, 900px);
     padding-top: 42px;
+  }
+
+  .language-switcher {
+    margin-bottom: 24px;
   }
 
   h1 {
