@@ -168,6 +168,10 @@ section {
   align-items: baseline;
 }
 
+.news-list li + li {
+  margin-top: 16px;
+}
+
 .news-list time {
   color: var(--accent-dark);
   font-size: 0.92rem;
@@ -216,10 +220,7 @@ section {
   font-weight: 700;
 }
 
-.corresponding-note {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
+
 
 .life-entry {
   padding-top: 24px;
