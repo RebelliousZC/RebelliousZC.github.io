@@ -389,6 +389,45 @@ section {
   font-size: 0.79rem;
 }
 
+.certificate-gallery {
+  width: min(100%, 640px);
+  margin-top: 24px;
+}
+
+.certificate-gallery figure {
+  margin-bottom: 0;
+}
+
+.certificate-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  background: #f3f4f3;
+}
+
+.certificate-rotator {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-rotator img {
+  flex: none;
+  width: 66.6667%;
+  max-width: none;
+  height: auto;
+  transform: rotate(90deg);
+}
+
+.certificate-gallery figcaption {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.79rem;
+}
+
 .gallery-portrait img {
   width: auto;
   max-width: 100%;
